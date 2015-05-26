@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'PXRotatorView_Example', :exclusive => true do
+  pod "PXRotatorView", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "PXRotatorView", :path => "../"
+
+  
+end
