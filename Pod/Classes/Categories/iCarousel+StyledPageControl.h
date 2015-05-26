@@ -4,7 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "iCarousel.h"
+#import <iCarousel/iCarousel.h>
 #import "StyledPageControl.h"
 
 typedef NS_ENUM(NSInteger , PXRotatorType){

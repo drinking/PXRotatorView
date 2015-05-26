@@ -4,7 +4,6 @@
 //
 
 #import "PXRotatorBaseViewModel.h"
-#import "iCarousel+StyledPageControl.h"
 
 @interface PXRotatorBaseViewModel ()
 @end
@@ -31,11 +30,6 @@
 
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index{
     //TODO:go to some view controller
-}
-
-- (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel{
-    [carousel setPageConrolCurrentPage:carousel.currentItemIndex];
-
 }
 
 - (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value{

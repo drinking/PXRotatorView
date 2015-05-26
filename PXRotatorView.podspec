@@ -9,19 +9,19 @@
 
 Pod::Spec.new do |s|
   s.name             = "PXRotatorView"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of PXRotatorView."
+  s.version          = "0.1.1"
+  s.summary          = "An auto rotating carousel view based on iCarousel and ReactiveCocoa"
   s.description      = <<-DESC
                        An optional longer description of PXRotatorView
 
                        * Markdown format.
                        * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/PXRotatorView"
+  s.homepage         = "https://github.com/drinking/PXRotatorView"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "drinking" => "pan49@126.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/PXRotatorView.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/drinking/PXRotatorView.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
@@ -34,5 +34,8 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'ReactiveCocoa', '~> 2.4.7'
+  s.dependency 'iCarousel', '~> 1.8.1'
+  s.dependency 'PureLayout', '~> 2.0.5'
+
 end
