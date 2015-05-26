@@ -1,0 +1,6 @@
+framework module PXRotatorView {
+  umbrella header "Pods-Tests-PXRotatorView-umbrella.h"
+
+  export *
+  module * { export * }
+}

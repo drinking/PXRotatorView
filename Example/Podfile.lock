@@ -1,0 +1,29 @@
+PODS:
+  - iCarousel (1.8.1)
+  - PureLayout (2.0.6)
+  - PXRotatorView (0.1.0):
+    - iCarousel (~> 1.8.1)
+    - PureLayout (~> 2.0.5)
+    - ReactiveCocoa (~> 2.4.7)
+  - ReactiveCocoa (2.4.7):
+    - ReactiveCocoa/UI (= 2.4.7)
+  - ReactiveCocoa/Core (2.4.7):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.4.7)
+  - ReactiveCocoa/UI (2.4.7):
+    - ReactiveCocoa/Core
+
+DEPENDENCIES:
+  - PXRotatorView (from `../`)
+
+EXTERNAL SOURCES:
+  PXRotatorView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  iCarousel: dace1cb858e3f4dc2614bee3201041247f82feda
+  PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
+  PXRotatorView: 43b5978411ff7968bbdc13cb3de39a5a537c5b75
+  ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
+
+COCOAPODS: 0.36.1

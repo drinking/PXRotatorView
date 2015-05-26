@@ -7,8 +7,12 @@
 //
 
 #import "PXViewController.h"
+#import "DKRotatorDemoViewModel.h"
+#import "iCarousel+StyledPageControl.h"
+#import <PXRotatorView/PXRotatorView.h>
 
 @interface PXViewController ()
+@property (nonatomic,strong) DKRotatorDemoViewModel *viewModel;
 
 @end
 
@@ -18,6 +22,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    _viewModel = [DKRotatorDemoViewModel new];
+    _viewModel.displayItems = [@[@"Hello",@"Nice",@"to",@"meet",@"you!"] mutableCopy];
+    PXRotatorView *rotatorView = [[PXRotatorView alloc] initWithFrame:self.view.frame];
+    
+    [self.view addSubview:rotatorView];
+    
+    rotatorView.carousel.delegate = self.viewModel;
+    rotatorView.carousel.dataSource = self.viewModel;
+    
+    [rotatorView.carousel addDefaultPageControl];
+    [rotatorView.carousel updatePageControl];
 }
 
 - (void)didReceiveMemoryWarning

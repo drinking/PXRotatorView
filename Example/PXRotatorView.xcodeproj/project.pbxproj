@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44BC00FA1B14B30000D6051C /* DKRotatorDemoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44BC00F91B14B30000D6051C /* DKRotatorDemoViewModel.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -41,7 +42,9 @@
 		2B72CEA6F38694B905A892CB /* Pods-PXRotatorView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXRotatorView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PXRotatorView_Example/Pods-PXRotatorView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2F8C74865A38233B9F5B3365 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		383BA6C2A2EA68E230DBEB9D /* PXRotatorView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PXRotatorView.podspec; path = ../PXRotatorView.podspec; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* PXRotatorView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = PXRotatorView.app; path = PXRotatorView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44BC00F81B14B30000D6051C /* DKRotatorDemoViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKRotatorDemoViewModel.h; sourceTree = "<group>"; };
+		44BC00F91B14B30000D6051C /* DKRotatorDemoViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKRotatorDemoViewModel.m; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* PXRotatorView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PXRotatorView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -110,7 +113,7 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* PXRotatorView.app */,
+				6003F58A195388D20070C39A /* PXRotatorView_Example.app */,
 				6003F5AE195388D20070C39A /* Tests.xctest */,
 			);
 			name = Products;
@@ -132,6 +135,8 @@
 		6003F593195388D20070C39A /* Example for PXRotatorView */ = {
 			isa = PBXGroup;
 			children = (
+				44BC00F81B14B30000D6051C /* DKRotatorDemoViewModel.h */,
+				44BC00F91B14B30000D6051C /* DKRotatorDemoViewModel.m */,
 				6003F59C195388D20070C39A /* PXAppDelegate.h */,
 				6003F59D195388D20070C39A /* PXAppDelegate.m */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
@@ -216,7 +221,7 @@
 			);
 			name = PXRotatorView_Example;
 			productName = PXRotatorView;
-			productReference = 6003F58A195388D20070C39A /* PXRotatorView.app */;
+			productReference = 6003F58A195388D20070C39A /* PXRotatorView_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* Tests */ = {
@@ -396,6 +401,7 @@
 			files = (
 				6003F59E195388D20070C39A /* PXAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* PXViewController.m in Sources */,
+				44BC00FA1B14B30000D6051C /* DKRotatorDemoViewModel.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

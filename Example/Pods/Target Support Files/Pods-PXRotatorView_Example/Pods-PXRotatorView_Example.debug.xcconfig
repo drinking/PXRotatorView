@@ -1,0 +1,8 @@
+FRAMEWORK_SEARCH_PATHS = "$PODS_FRAMEWORK_BUILD_PATH"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_FRAMEWORK_BUILD_PATH/PXRotatorView.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/PureLayout.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/ReactiveCocoa.framework/Headers" -iquote "$PODS_FRAMEWORK_BUILD_PATH/iCarousel.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "PXRotatorView" -framework "PureLayout" -framework "ReactiveCocoa" -framework "iCarousel"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-PXRotatorView_Example
+PODS_ROOT = ${SRCROOT}/Pods
