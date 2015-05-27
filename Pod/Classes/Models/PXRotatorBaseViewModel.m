@@ -33,6 +33,9 @@
 }
 
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel{
+    if ([carousel.superview respondsToSelector:@selector(setPageConrolCurrentPage:)]) {
+        [carousel.superview performSelector:@selector(setPageConrolCurrentPage:) withObject:@(carousel.currentItemIndex) afterDelay:0];
+    }
 
 //    [carousel setPageConrolCurrentPage:carousel.currentItemIndex];
 

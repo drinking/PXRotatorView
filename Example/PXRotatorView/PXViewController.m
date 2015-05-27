@@ -26,14 +26,12 @@
     _viewModel = [DKRotatorDemoViewModel new];
     _viewModel.displayItems = [@[@"Hello",@"Nice",@"to",@"meet",@"you!"] mutableCopy];
     PXRotatorView *rotatorView = [[PXRotatorView alloc] initWithFrame:self.view.frame];
-    
     [self.view addSubview:rotatorView];
     
-    rotatorView.carousel.delegate = self.viewModel;
-    rotatorView.carousel.dataSource = self.viewModel;
-    
+    [rotatorView bindViewModel:self.viewModel];
     [rotatorView addDefaultPageControl];
     [rotatorView updatePageControl];
+    [rotatorView startRotating];
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,7 +7,7 @@
 //
 
 #import "DKRotatorDemoViewModel.h"
-#import <PXRotatorView/iCarousel+StyledPageControl.h>
+#import <PXRotatorView/StyledPageControl.h>
 
 @implementation DKRotatorDemoViewModel
 
@@ -25,7 +25,8 @@
     return mView;
 }
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel{
-    [carousel setPageConrolCurrentPage:carousel.currentItemIndex];
+    [super carouselCurrentItemIndexDidChange:carousel];
+//    [carousel setPageConrolCurrentPage:carousel.currentItemIndex];
     
 }
 
