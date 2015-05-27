@@ -8,8 +8,8 @@
 
 #import "PXViewController.h"
 #import "DKRotatorDemoViewModel.h"
-#import "iCarousel+StyledPageControl.h"
 #import <PXRotatorView/PXRotatorView.h>
+#import <PXRotatorView/PXRotatorView+StyledPageControl.h>
 
 @interface PXViewController ()
 @property (nonatomic,strong) DKRotatorDemoViewModel *viewModel;
@@ -32,8 +32,8 @@
     rotatorView.carousel.delegate = self.viewModel;
     rotatorView.carousel.dataSource = self.viewModel;
     
-    [rotatorView.carousel addDefaultPageControl];
-    [rotatorView.carousel updatePageControl];
+    [rotatorView addDefaultPageControl];
+    [rotatorView updatePageControl];
 }
 
 - (void)didReceiveMemoryWarning

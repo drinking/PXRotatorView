@@ -10,7 +10,7 @@
 #define COCOAPODS_POD_AVAILABLE_PXRotatorView
 #define COCOAPODS_VERSION_MAJOR_PXRotatorView 0
 #define COCOAPODS_VERSION_MINOR_PXRotatorView 1
-#define COCOAPODS_VERSION_PATCH_PXRotatorView 0
+#define COCOAPODS_VERSION_PATCH_PXRotatorView 1
 
 // PureLayout
 #define COCOAPODS_POD_AVAILABLE_PureLayout

@@ -1,7 +1,7 @@
 {
   "name": "PXRotatorView",
-  "version": "0.1.0",
-  "summary": "A short description of PXRotatorView.",
+  "version": "0.1.1",
+  "summary": "An auto rotating carousel view based on iCarousel and ReactiveCocoa",
   "description": "                       An optional longer description of PXRotatorView\n\n                       * Markdown format.\n                       * Don't worry about the indent, we strip it!\n",
   "homepage": "https://github.com/drinking/PXRotatorView",
   "license": "MIT",
@@ -9,8 +9,8 @@
     "drinking": "pan49@126.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/PXRotatorView.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/drinking/PXRotatorView.git",
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "7.0"

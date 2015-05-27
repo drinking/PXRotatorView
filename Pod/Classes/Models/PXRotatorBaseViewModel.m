@@ -32,12 +32,19 @@
     //TODO:go to some view controller
 }
 
+- (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel{
+
+//    [carousel setPageConrolCurrentPage:carousel.currentItemIndex];
+
+}
+
 - (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value{
     if (option == iCarouselOptionWrap) {
         return YES;
     }
     return value;
 }
+
 
 
 @end
