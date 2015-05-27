@@ -405,6 +405,8 @@
 		DB93A9098580A86E7D38D449 /* UIBarButtonItem+RACCommandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6307D088473E1B343B1769 /* UIBarButtonItem+RACCommandSupport.m */; };
 		DBAE61F347D08960E33A0484 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC406B12B6BD57EF1B705C5 /* Foundation.framework */; };
 		DBE5A220678C0B6B0664FA45 /* UIGestureRecognizer+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC4CC1D298F2F9BFE3B3038 /* UIGestureRecognizer+RACSignalSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBE91709E81E519047BBACA8 /* PXRotatorView+StyledPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE9133F59358D657C6C4881 /* PXRotatorView+StyledPageControl.m */; };
+		DBE91A1639ED25CEDB64612F /* PXRotatorView+StyledPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = DBE9195A384A95AAF7D7BF72 /* PXRotatorView+StyledPageControl.h */; };
 		DDC942D35E60822314ABA45F /* RACBehaviorSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC841132AAA5936E003DF21 /* RACBehaviorSubject.m */; };
 		DEE1E5CBA7A95F30DCDC004B /* NSString+RACKeyPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4486C91147D729E4583FFF /* NSString+RACKeyPathUtilities.m */; };
 		DF257651E81907141387EF21 /* RACSubscriber.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F687A909EE97B3C28AA8F6 /* RACSubscriber.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -843,6 +845,8 @@
 		DAAFF572B150F09593A7E689 /* PXRotatorBaseViewModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PXRotatorBaseViewModel.m; sourceTree = "<group>"; };
 		DB02AD1406CDB11051358B7D /* RACPassthroughSubscriber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACPassthroughSubscriber.m; path = ReactiveCocoa/RACPassthroughSubscriber.m; sourceTree = "<group>"; };
 		DB0C0BF7C461A2759CE3291F /* RACKVOChannel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACKVOChannel.m; path = ReactiveCocoa/RACKVOChannel.m; sourceTree = "<group>"; };
+		DBE9133F59358D657C6C4881 /* PXRotatorView+StyledPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PXRotatorView+StyledPageControl.m"; sourceTree = "<group>"; };
+		DBE9195A384A95AAF7D7BF72 /* PXRotatorView+StyledPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXRotatorView+StyledPageControl.h"; sourceTree = "<group>"; };
 		DCC6E5C5E72C72250BF77F5C /* UIActionSheet+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActionSheet+RACSignalSupport.h"; path = "ReactiveCocoa/UIActionSheet+RACSignalSupport.h"; sourceTree = "<group>"; };
 		DD2A552431B79720E5E408A2 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
 		DD58FDD9D2161248E05C7A65 /* UIImagePickerController+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImagePickerController+RACSignalSupport.h"; path = "ReactiveCocoa/UIImagePickerController+RACSignalSupport.h"; sourceTree = "<group>"; };
@@ -1221,6 +1225,8 @@
 			children = (
 				0F6782E0519317B506C0C119 /* iCarousel+StyledPageControl.h */,
 				B0ED25718C1B2DF870B8BCB5 /* iCarousel+StyledPageControl.m */,
+				DBE9133F59358D657C6C4881 /* PXRotatorView+StyledPageControl.m */,
+				DBE9195A384A95AAF7D7BF72 /* PXRotatorView+StyledPageControl.h */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -1514,6 +1520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C53843BCE3854BCA3FA66FD /* Pods-PXRotatorView_Example-umbrella.h in Headers */,
+				DBE91A1639ED25CEDB64612F /* PXRotatorView+StyledPageControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2216,6 +2223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0230F60040ED2EE2A1500C64 /* Pods-PXRotatorView_Example-dummy.m in Sources */,
+				DBE91709E81E519047BBACA8 /* PXRotatorView+StyledPageControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
