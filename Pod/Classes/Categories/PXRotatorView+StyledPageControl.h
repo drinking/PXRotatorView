@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger , PXRotatorType){
 @property (nonatomic, assign) PXRotatorType rotatorType;
 
 - (void)updatePageControl;
-- (void)setPageConrolCurrentPage:(NSInteger)index;
+- (void)setPageConrolCurrentPage:(NSNumber *) index;
 - (void)addDefaultPageControl;
 - (void)addNumberPageControl;
 

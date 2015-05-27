@@ -69,8 +69,8 @@
     self.rotatorType = PXRotatorNumber;
 }
 
-- (void)setPageConrolCurrentPage:(NSInteger)index{
-    [self.pageControl setCurrentPage:index];
+- (void)setPageConrolCurrentPage:(NSNumber *) index{
+    [self.pageControl setCurrentPage:[index integerValue]];
 }
 
 - (UIImage *)createText:(NSString *)text withColor:(UIColor *)textColor backgroundColor:(UIColor*)bgColor{

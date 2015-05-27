@@ -67,10 +67,8 @@
 
     self.carousel.delegate = viewModel;
     self.carousel.dataSource = viewModel;
-    @weakify(viewModel)
     @weakify(self)
     [RACObserve(viewModel, displayItems) subscribeNext:^(id x) {
-        @strongify(viewModel)
         @strongify(self)
         [self.carousel reloadData];
     }];
