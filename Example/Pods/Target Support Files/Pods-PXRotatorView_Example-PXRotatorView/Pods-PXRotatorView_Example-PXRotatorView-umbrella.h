@@ -1,6 +1,5 @@
 #import <UIKit/UIKit.h>
 
-#import "PXRotatorView+StyledPageControl.h"
 #import "PXRotatorBaseViewModel.h"
 #import "PXRotatorView.h"
 #import "StyledPageControl.h"

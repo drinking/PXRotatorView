@@ -7,7 +7,6 @@
 //
 
 #import "DKRotatorDemoViewModel.h"
-#import <PXRotatorView/StyledPageControl.h>
 
 @implementation DKRotatorDemoViewModel
 
