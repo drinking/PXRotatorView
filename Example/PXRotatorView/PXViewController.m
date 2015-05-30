@@ -8,8 +8,8 @@
 
 #import "PXViewController.h"
 #import "DKRotatorDemoViewModel.h"
+#import "PXRotatorView+StyledPageControl.h"
 #import <PXRotatorView/PXRotatorView.h>
-#import <PXRotatorView/PXRotatorView+StyledPageControl.h>
 
 @interface PXViewController ()
 @property (nonatomic,strong) DKRotatorDemoViewModel *viewModel;
@@ -21,8 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
+
     _viewModel = [DKRotatorDemoViewModel new];
     _viewModel.displayItems = [@[@"Hello",@"Nice",@"to",@"meet",@"you!"] mutableCopy];
     PXRotatorView *rotatorView = [[PXRotatorView alloc] initWithFrame:self.view.frame];
