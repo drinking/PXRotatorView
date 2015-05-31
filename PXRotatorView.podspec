@@ -12,10 +12,9 @@ Pod::Spec.new do |s|
   s.version          = "0.5.0"
   s.summary          = "An auto rotating carousel view based on iCarousel and ReactiveCocoa"
   s.description      = <<-DESC
-                       An optional longer description of PXRotatorView
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                        An carousel view based on iCarousel and ReactiveCocoa.
+                        You should override base view model and provide your own data source.
+                        It's easy to  customize a page control using category.
                        DESC
   s.homepage         = "https://github.com/drinking/PXRotatorView"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
@@ -36,6 +35,6 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'ReactiveCocoa', '~> 2.4.7'
   s.dependency 'iCarousel', '~> 1.8.1'
-  s.dependency 'PureLayout', '~> 2.0.5'
+  # s.dependency 'PureLayout', '~> 2.0.5'
 
 end
