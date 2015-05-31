@@ -1,7 +1,7 @@
 PODS:
   - iCarousel (1.8.1)
   - PureLayout (2.0.6)
-  - PXRotatorView (0.5.0):
+  - PXRotatorView (0.5.1):
     - iCarousel (~> 1.8.1)
     - ReactiveCocoa (~> 2.4.7)
   - ReactiveCocoa (2.4.7):
@@ -23,7 +23,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   iCarousel: dace1cb858e3f4dc2614bee3201041247f82feda
   PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
-  PXRotatorView: 70f76f8da43bccf289ae8b32ed6c482d0f61f1e3
+  PXRotatorView: 339dc9059b079e7d6058bb91b7ae27ae7e3c7450
   ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
 
 COCOAPODS: 0.36.1

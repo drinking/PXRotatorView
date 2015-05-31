@@ -10,6 +10,7 @@
 #import "DKRotatorDemoViewModel.h"
 #import "PXRotatorView+StyledPageControl.h"
 #import <PXRotatorView/PXRotatorView.h>
+#import <PureLayout/ALView+PureLayout.h>
 
 @implementation PXViewController
 
@@ -17,15 +18,19 @@
 {
     [super viewDidLoad];
 
+    self.navigationController.navigationBar.translucent = NO;
 
     _viewModel = [DKRotatorDemoViewModel new];
-    _viewModel.displayItems = [@[@"Hello",@"Nice",@"to",@"meet",@"you!"] mutableCopy];
-    _rotatorView = [[PXRotatorView alloc] initWithFrame:self.view.frame];
+    _viewModel.displayItems = [@[@"pic1.jpg",@"pic2.jpg",@"pic3.jpg",@"pic4.jpg"] mutableCopy];
+
+    _rotatorView = [[PXRotatorView alloc] init];
     _rotatorView.interval = 1;
     [self.view addSubview:_rotatorView];
+    [_rotatorView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];
+    [_rotatorView autoSetDimension:ALDimensionHeight toSize:160];
 
     [_rotatorView bindViewModel:self.viewModel];
-    [_rotatorView addDefaultPageControl];
+    [_rotatorView addNumberPageControl];
     [_rotatorView updatePageControl];
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Rotate"

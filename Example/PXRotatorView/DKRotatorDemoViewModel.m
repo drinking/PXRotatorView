@@ -11,17 +11,14 @@
 @implementation DKRotatorDemoViewModel
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view{
+
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:carousel.bounds];
+    imageView.layer.masksToBounds = YES;
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    NSString *imageName = self.displayItems[index];
+    [imageView setImage:[UIImage imageNamed:imageName]];
     
-    UIView *mView = [[UIView alloc] initWithFrame:carousel.bounds];
-    mView.backgroundColor = [self randomColor];
-    UILabel *label = [[UILabel alloc] init];
-    label.textColor = [UIColor whiteColor];
-    [mView addSubview:label];
-    label.text = self.displayItems[index];
-    [label sizeToFit];
-     label.center = mView.center;
-    
-    return mView;
+    return imageView;
 }
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel{
     [super carouselCurrentItemIndexDidChange:carousel];

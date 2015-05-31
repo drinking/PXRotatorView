@@ -3,7 +3,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PXRotatorView.h"
+#import <PXRotatorView/PXRotatorView.h>
 #import <iCarousel/iCarousel.h>
 #import "StyledPageControl.h"
 

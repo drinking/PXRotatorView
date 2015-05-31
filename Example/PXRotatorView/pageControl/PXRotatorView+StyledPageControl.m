@@ -3,8 +3,8 @@
 //
 
 #import "PXRotatorView+StyledPageControl.h"
-#import "ALView+PureLayout.h"
 #import <objc/runtime.h>
+#import <PureLayout/ALView+PureLayout.h>
 
 
 @implementation PXRotatorView (StyledPageControl)
@@ -41,7 +41,7 @@
     self.pageControl.numberOfPages = self.carousel.numberOfItems;
 
     if (self.rotatorType == PXPotatorWhiteDot){
-        [self.pageControl setThumbImage:[self createDot:[UIColor whiteColor]]];
+        [self.pageControl setThumbImage:[self createDot:[UIColor lightGrayColor]]];
         [self.pageControl setSelectedThumbImage:[self createDot:[UIColor redColor]]];
         return;
     }
