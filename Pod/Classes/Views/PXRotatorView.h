@@ -8,6 +8,7 @@
 @class PXRotatorBaseViewModel;
 
 @interface PXRotatorView : UIView
+@property (nonatomic, assign) NSInteger interval;
 @property (nonatomic, strong) iCarousel *carousel;
 - (void)startRotating;
 - (void)stopRotating;

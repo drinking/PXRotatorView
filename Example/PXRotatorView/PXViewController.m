@@ -12,7 +12,7 @@
 #import <PXRotatorView/PXRotatorView.h>
 
 @interface PXViewController ()
-@property (nonatomic,strong) DKRotatorDemoViewModel *viewModel;
+
 
 @end
 
@@ -21,6 +21,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+
+
 
     _viewModel = [DKRotatorDemoViewModel new];
     _viewModel.displayItems = [@[@"Hello",@"Nice",@"to",@"meet",@"you!"] mutableCopy];
@@ -31,6 +34,16 @@
     [rotatorView addDefaultPageControl];
     [rotatorView updatePageControl];
     [rotatorView startRotating];
+
+    
+    [rotatorView.rac_willDeallocSignal subscribeCompleted:^{
+        NSLog(@"rv dealloc signal ...");
+    }];
+    
+    [_viewModel.rac_willDeallocSignal subscribeCompleted:^{
+        NSLog(@"rm dealloc signal ...");
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning
