@@ -9,7 +9,33 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+First you need to subclass `PXRotatorBaseViewModel` and implement `carousel:viewForItemAtIndex:reusingView:` method in where you customize your own view.
+
+Then create a viewModel and set your data source.
+
+Finally create a rotatorView and bind to your viewModel.
+
+You may add a custom pageControl to your rotatorView. I implement one, you can modify it or write your own.
+
+```objectiveC
+
+    DKRotatorDemoViewModel *viewModel = [DKRotatorDemoViewModel new];
+    viewModel.displayItems = [@[@"Hello",@"Nice",@"to",@"meet",@"you!"] mutableCopy];
+    
+    PXRotatorView *rotatorView = [[PXRotatorView alloc] initWithFrame:self.view.frame];
+    rotatorView.interval = 1;
+    [self.view addSubview:rotatorView];
+
+    [rotatorView bindViewModel:self.viewModel];
+    [rotatorView addDefaultPageControl];
+    [rotatorView updatePageControl];
+
+
+```
+
 ## Requirements
+
+ iCarousel and ReactiveCocoa
 
 ## Installation
 
