@@ -29,6 +29,7 @@
 }
 
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel{
+    #pragma GCC diagnostic ignored "-Wundeclared-selector"
     if ([carousel.superview respondsToSelector:@selector(setPageConrolCurrentPage:)]) {
         [carousel.superview performSelector:@selector(setPageConrolCurrentPage:) withObject:@(carousel.currentItemIndex) afterDelay:0];
     }
