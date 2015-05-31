@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/PXRotatorView.svg?style=flat)](http://cocoapods.org/pods/PXRotatorView)
 
 ## ScreenShot
-![screenshot]()
+![screenshot](https://raw.githubusercontent.com/drinking/PXRotatorView/master/screenshot.png)
 
 ## Usage
 
