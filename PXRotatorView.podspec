@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PXRotatorView"
-  s.version          = "0.4.0"
+  s.version          = "0.5.0"
   s.summary          = "An auto rotating carousel view based on iCarousel and ReactiveCocoa"
   s.description      = <<-DESC
                        An optional longer description of PXRotatorView
