@@ -11,11 +11,6 @@
 #import "PXRotatorView+StyledPageControl.h"
 #import <PXRotatorView/PXRotatorView.h>
 
-@interface PXViewController ()
-
-
-@end
-
 @implementation PXViewController
 
 - (void)viewDidLoad
@@ -23,27 +18,36 @@
     [super viewDidLoad];
 
 
-
-
     _viewModel = [DKRotatorDemoViewModel new];
     _viewModel.displayItems = [@[@"Hello",@"Nice",@"to",@"meet",@"you!"] mutableCopy];
-    PXRotatorView *rotatorView = [[PXRotatorView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:rotatorView];
-    
-    [rotatorView bindViewModel:self.viewModel];
-    [rotatorView addDefaultPageControl];
-    [rotatorView updatePageControl];
-    [rotatorView startRotating];
+    _rotatorView = [[PXRotatorView alloc] initWithFrame:self.view.frame];
+    _rotatorView.interval = 1;
+    [self.view addSubview:_rotatorView];
 
-    
-    [rotatorView.rac_willDeallocSignal subscribeCompleted:^{
-        NSLog(@"rv dealloc signal ...");
+    [_rotatorView bindViewModel:self.viewModel];
+    [_rotatorView addDefaultPageControl];
+    [_rotatorView updatePageControl];
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Rotate"
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:nil action:nil];
+
+    @weakify(self)
+    self.navigationItem.rightBarButtonItem.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self)
+        if (self.rotatorView.isRotating){
+            [self.rotatorView stopRotating];
+        }else{
+            [self.rotatorView startRotating];
+        }
+
+        return [RACSignal empty];
+    }];
+
+    RAC(self.navigationItem.rightBarButtonItem,title) = [RACObserve(self.rotatorView, isRotating) map:^id(id rotating) {
+        return [rotating boolValue]?@"Stop":@"Rotate";
     }];
     
-    [_viewModel.rac_willDeallocSignal subscribeCompleted:^{
-        NSLog(@"rm dealloc signal ...");
-    }];
-
 }
 
 - (void)didReceiveMemoryWarning

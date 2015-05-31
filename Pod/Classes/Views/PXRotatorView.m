@@ -15,7 +15,8 @@
 
 - (void)commonInit{
 
-    self.interval = 5;
+    _interval = 5;
+    _isRotating = NO;
     self.layer.masksToBounds = YES;
     _carousel = [iCarousel new];
     _carousel.pagingEnabled = YES;
@@ -45,6 +46,7 @@
 - (void)startRotating{
     [self stopRotating];
 
+    self.isRotating = YES;
     timerSignal =  [RACSignal interval:self.interval onScheduler:[RACScheduler mainThreadScheduler]];
     @weakify(self)
     timerDisposable = [[timerSignal takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id x) {
@@ -59,6 +61,7 @@
 
 - (void)stopRotating{
 
+    self.isRotating = NO;
     if (timerSignal){
         timerSignal = nil;
     }
