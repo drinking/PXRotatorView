@@ -18,30 +18,8 @@
 {
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-
-//    PXViewController *pxViewController = [PXViewController new];
-
-    
-    UIViewController *vc = [UIViewController new];
-    vc.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"new"
-                                                                              style:UIBarButtonItemStylePlain
-                                                                             target:nil action:nil];
-    
-    @weakify(vc)
-    vc.navigationItem.rightBarButtonItem.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        @strongify(vc)
-        PXViewController *pxViewCtrl = [PXViewController new];
-        [vc.navigationController pushViewController:pxViewCtrl animated:YES];
-        [pxViewCtrl.rac_willDeallocSignal subscribeCompleted:^{
-            NSLog(@"dealloc signal ...");
-        }];
-        [pxViewCtrl.viewModel.rac_willDeallocSignal subscribeCompleted:^{
-            NSLog(@"view Model signal ...");
-        }];
-        return [RACSignal empty];
-    }];
-
-    UINavigationController *rootCtrl = [[UINavigationController alloc] initWithRootViewController:vc];
+    PXViewController *pxViewController = [PXViewController new];
+    UINavigationController *rootCtrl = [[UINavigationController alloc] initWithRootViewController:pxViewController];
     self.window.rootViewController =  rootCtrl;
     return YES;
 }

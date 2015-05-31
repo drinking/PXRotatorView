@@ -8,8 +8,10 @@
 
 @import UIKit;
 @class DKRotatorDemoViewModel;
+@class PXRotatorView;
 
 @interface PXViewController : UIViewController
 @property (nonatomic,strong) DKRotatorDemoViewModel *viewModel;
+@property (nonatomic,strong) PXRotatorView *rotatorView;
 
 @end
