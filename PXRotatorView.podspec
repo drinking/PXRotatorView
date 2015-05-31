@@ -35,6 +35,5 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'ReactiveCocoa', '~> 2.4.7'
   s.dependency 'iCarousel', '~> 1.8.1'
-  # s.dependency 'PureLayout', '~> 2.0.5'
 
 end

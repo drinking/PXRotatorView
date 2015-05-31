@@ -86,7 +86,7 @@
     CGFloat fontHeight = font.pointSize;
     CGFloat yOffset = -2+ (size.height - fontHeight) / 2.0;
     CGFloat xOffset = 2+(size.width - fontHeight) / 2.0;
-    [text drawInRect:CGRectMake(xOffset, yOffset, 5, font.pointSize) withFont:font];
+    [text drawInRect:CGRectMake(xOffset, yOffset, 5, font.pointSize) withAttributes:@{NSFontAttributeName:font}];
     UIImage *finalImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 

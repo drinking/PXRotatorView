@@ -9,8 +9,8 @@
 // PXRotatorView
 #define COCOAPODS_POD_AVAILABLE_PXRotatorView
 #define COCOAPODS_VERSION_MAJOR_PXRotatorView 0
-#define COCOAPODS_VERSION_MINOR_PXRotatorView 3
-#define COCOAPODS_VERSION_PATCH_PXRotatorView 2
+#define COCOAPODS_VERSION_MINOR_PXRotatorView 5
+#define COCOAPODS_VERSION_PATCH_PXRotatorView 0
 
 // PureLayout
 #define COCOAPODS_POD_AVAILABLE_PureLayout

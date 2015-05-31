@@ -23,7 +23,6 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		857C7A8EEBD374CEC36D20E2 /* Pods_PXRotatorView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093396794D9761E6AB022C52 /* Pods_PXRotatorView_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DBE917A0A45C7B7B589052B9 /* PXRotatorView+StyledPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE91257E4361330C7F15598 /* PXRotatorView+StyledPageControl.m */; };
 		DBE91B027AB9BDF5D74DCC2A /* StyledPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE917E1E331F84390C24C64 /* StyledPageControl.m */; };
 		E55AB9B1FA5B4158B159F523 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8C74865A38233B9F5B3365 /* Pods_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -86,7 +85,6 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				857C7A8EEBD374CEC36D20E2 /* Pods_PXRotatorView_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
