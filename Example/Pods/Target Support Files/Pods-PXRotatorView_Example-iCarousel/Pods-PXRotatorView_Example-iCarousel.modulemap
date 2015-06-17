@@ -1,6 +1,0 @@
-framework module iCarousel {
-  umbrella header "Pods-PXRotatorView_Example-iCarousel-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-framework module ReactiveCocoa {
-  umbrella header "Pods-Tests-ReactiveCocoa-umbrella.h"
-
-  export *
-  module * { export * }
-}

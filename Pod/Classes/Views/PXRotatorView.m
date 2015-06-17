@@ -26,7 +26,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    _carousel.frame = self.frame;
+    _carousel.frame = self.bounds;
 }
 
 - (instancetype)init {
