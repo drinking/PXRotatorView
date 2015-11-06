@@ -85,13 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Tests/PXRotatorView.framework"
-  install_framework "Pods-Tests/PureLayout.framework"
-  install_framework "Pods-Tests/ReactiveCocoa.framework"
   install_framework "Pods-Tests/iCarousel.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Tests/PXRotatorView.framework"
-  install_framework "Pods-Tests/PureLayout.framework"
-  install_framework "Pods-Tests/ReactiveCocoa.framework"
   install_framework "Pods-Tests/iCarousel.framework"
 fi

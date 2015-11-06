@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9D5DA8C066A1345440EA543B09F47CD7"
-               BlueprintName = "PXRotatorView"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "PXRotatorView.framework">
+               BuildableIdentifier = 'primary'
+               BlueprintIdentifier = 'D517C97FA8301C62F828C60D'
+               BlueprintName = 'PXRotatorView'
+               ReferencedContainer = 'container:Pods.xcodeproj'
+               BuildableName = 'PXRotatorView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
