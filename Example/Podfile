@@ -3,11 +3,8 @@ use_frameworks!
 
 target 'PXRotatorView_Example', :exclusive => true do
   pod "PXRotatorView", :path => "../"
-  pod 'PureLayout'
 end
 
 target 'Tests', :exclusive => true do
   pod "PXRotatorView", :path => "../"
-  pod 'PureLayout'
-
 end
