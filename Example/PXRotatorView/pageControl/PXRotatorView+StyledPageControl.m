@@ -60,8 +60,10 @@
 - (void)addDefaultPageControl{
     self.rotatorType = PXPotatorWhiteDot;
     [self addSubview:self.pageControl];
-    [self.pageControl autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
-    [self.pageControl autoSetDimension:ALDimensionHeight toSize:24];
+
+    CGFloat height = self.frame.size.height;
+    CGFloat width = self.frame.size.width;
+    self.pageControl.frame = CGRectMake(0,height-24,width,24);
 }
 
 - (void)addNumberPageControl{

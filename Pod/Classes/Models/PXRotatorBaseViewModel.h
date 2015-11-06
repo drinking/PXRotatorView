@@ -5,8 +5,6 @@
 
 #import <Foundation/Foundation.h>
 #import <iCarousel/iCarousel.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
-
 
 @interface PXRotatorBaseViewModel : NSObject<iCarouselDataSource, iCarouselDelegate>
 
