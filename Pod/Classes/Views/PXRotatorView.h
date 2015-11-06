@@ -5,13 +5,18 @@
 
 #import <UIKit/UIKit.h>
 #import <iCarousel/iCarousel.h>
-@class PXRotatorBaseViewModel;
+#import "PXRotatorBaseViewModel.h"
 
 @interface PXRotatorView : UIView
-@property (nonatomic, assign) NSInteger interval;
-@property (nonatomic, assign) BOOL isRotating;
-@property (nonatomic, strong) iCarousel *carousel;
+
+@property(nonatomic, strong) PXRotatorBaseViewModel *viewModel;
+@property(nonatomic, assign) NSInteger interval;
+@property(nonatomic, assign) BOOL isRotating;
+@property(nonatomic, strong) iCarousel *carousel;
+
 - (void)startRotating;
+
 - (void)stopRotating;
+
 - (void)bindViewModel:(PXRotatorBaseViewModel *)viewModel;
 @end

@@ -23,14 +23,14 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		6B7526E7B910C9091DDB9763 /* Pods_PXRotatorView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093396794D9761E6AB022C52 /* Pods_PXRotatorView_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6B7526E7B910C9091DDB9763 /* Pods_PXRotatorView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093396794D9761E6AB022C52 /* Pods_PXRotatorView_Example.framework */; };
 		DBE9105156922D14C7C85036 /* PXRotatorView+StyledPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE91F7335A13F054F71C3CC /* PXRotatorView+StyledPageControl.m */; };
 		DBE9111A91B51EC3AB56093E /* pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBE9138FD0C5D93D1BFBBE62 /* pic1.jpg */; };
 		DBE912499076324B415D63E0 /* StyledPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE913441FC9113018F2A0D4 /* StyledPageControl.m */; };
 		DBE91688651F38BA88A2141D /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBE91DCC9FA857A6BEA3ABFE /* pic2.jpg */; };
 		DBE918854860246DBB071E6A /* pic3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBE91CB92B32F2283917BDDA /* pic3.jpg */; };
 		DBE91E6D5E0FB46783AD47A9 /* pic4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBE917258AAA9BB51AD6E8C0 /* pic4.jpg */; };
-		E55AB9B1FA5B4158B159F523 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8C74865A38233B9F5B3365 /* Pods_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E55AB9B1FA5B4158B159F523 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8C74865A38233B9F5B3365 /* Pods_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

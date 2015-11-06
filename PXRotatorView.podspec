@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PXRotatorView"
-  s.version          = "0.5.4"
+  s.version          = "0.5.5"
   s.summary          = "An auto rotating carousel view based on iCarousel and ReactiveCocoa"
   s.description      = <<-DESC
                         An carousel view based on iCarousel and ReactiveCocoa.
@@ -33,7 +33,6 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'ReactiveCocoa', '~> 2.4.7'
   s.dependency 'iCarousel', '~> 1.8.1'
 
 end

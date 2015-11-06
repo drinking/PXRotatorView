@@ -1,0 +1,6 @@
+framework module PXRotatorView {
+  umbrella header "PXRotatorView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -4,17 +4,16 @@
 //
 
 #import "PXRotatorView.h"
-#import "PXRotatorBaseViewModel.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
 
-@implementation PXRotatorView{
-    RACSignal *timerSignal;
-    RACDisposable *timerDisposable;
+@interface PXRotatorView ()
 
-}
+@property(nonatomic, strong) NSTimer *timer;
 
-- (void)commonInit{
+@end
 
+@implementation PXRotatorView
+
+- (void)commonInit {
     _interval = 5;
     _isRotating = NO;
     self.layer.masksToBounds = YES;
@@ -22,6 +21,11 @@
     _carousel.pagingEnabled = YES;
     [self addSubview:_carousel];
 
+    [self addObserver:self forKeyPath:@"viewModel" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:@"viewModel"];
 }
 
 - (void)layoutSubviews {
@@ -30,57 +34,56 @@
 }
 
 - (instancetype)init {
-    if(self = [super init]){
+    if (self = [super init]) {
         [self commonInit];
     }
     return self;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    if ([super initWithFrame:frame]){
+    if ([super initWithFrame:frame]) {
         [self commonInit];
     }
     return self;
 }
 
-- (void)startRotating{
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"viewModel"]) {
+        [self.carousel reloadData];
+    }
+}
+
+- (void)startRotating {
     [self stopRotating];
 
     self.isRotating = YES;
-    timerSignal =  [RACSignal interval:self.interval onScheduler:[RACScheduler mainThreadScheduler]];
-    @weakify(self)
-    timerDisposable = [[timerSignal takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id x) {
-        @strongify(self)
-        NSInteger newIndex=self.carousel.currentItemIndex+1;
-        if (newIndex > self.carousel.numberOfItems) {
-            newIndex=0;
-        }
-        [self.carousel scrollToItemAtIndex:newIndex animated:YES];
-    }];
+    if ([self.timer isValid]) {
+        [self.timer invalidate];
+    }
+    self.timer = nil;
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:self.interval target:self selector:@selector(scrollToNextPage) userInfo:nil repeats:YES];
 }
 
-- (void)stopRotating{
-
+- (void)stopRotating {
     self.isRotating = NO;
-    if (timerSignal){
-        timerSignal = nil;
+    if ([self.timer isValid]) {
+        [self.timer invalidate];
     }
-
-    if(timerDisposable){
-        [timerDisposable dispose];
-        timerDisposable = nil;
-    }
+    self.timer = nil;
 }
 
-- (void)bindViewModel:(PXRotatorBaseViewModel *)viewModel{
+- (void)scrollToNextPage {
+    NSInteger newIndex = self.carousel.currentItemIndex + 1;
+    if (newIndex > self.carousel.numberOfItems) {
+        newIndex = 0;
+    }
+    [self.carousel scrollToItemAtIndex:newIndex animated:YES];
+}
 
+- (void)bindViewModel:(PXRotatorBaseViewModel *)viewModel {
     self.carousel.delegate = viewModel;
     self.carousel.dataSource = viewModel;
-    @weakify(self)
-    [RACObserve(viewModel, displayItems) subscribeNext:^(id x) {
-        @strongify(self)
-        [self.carousel reloadData];
-    }];
+    self.viewModel = viewModel;
 }
 
 @end
