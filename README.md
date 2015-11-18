@@ -29,7 +29,7 @@ You may add a custom pageControl to your rotatorView. I implement one, you can m
     rotatorView.interval = 1;
     [self.view addSubview:rotatorView];
 
-    [rotatorView bindViewModel:self.viewModel];
+    [rotatorView bindViewModel:viewModel];
     [rotatorView addDefaultPageControl];
     [rotatorView updatePageControl];
 
@@ -38,7 +38,7 @@ You may add a custom pageControl to your rotatorView. I implement one, you can m
 
 ## Requirements
 
- iCarousel and ReactiveCocoa
+ iCarousel
 
 ## Installation
 
